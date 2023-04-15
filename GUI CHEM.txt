@@ -1,0 +1,31 @@
+# import module 
+from tkinter import *
+# create root window
+root = Tk()
+# root window title and dimension 
+root.title("welcome to VAC")
+# set geometry (width*height)
+root.geometry( '500x300' )
+# adding a label to the root window
+lbl = Label(root, text = "do you love to read books?")
+lbl.grid()
+
+# adding entry field
+txt = Entry(root , width=10)
+txt.grid(column =1, row =0)
+
+# function to display user text when
+# button is clicked
+def clicked():
+    res = "you answered" + txt.get()
+    lbl.configure(text = res)
+
+#button widget with blue color text inside
+btn = Button(root, text ="click here" , fg = "blue", command=clicked)
+#set button grid
+btn.grid(column=5, row=0)
+
+
+# all widgets will be here 
+# execute tkinter
+root.mainloop()
